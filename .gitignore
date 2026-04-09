@@ -1,0 +1,46 @@
+# System files (Mac/Windows junk)
+.DS_Store
+.DS_Store?
+Thumbs.db
+*.tmp
+*.log
+desktop.ini
+
+# Editor settings (VS Code, etc)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# If you ever add Node.js later
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment files (just in case)
+.env
+.env.local
+.env.production
+.env.development
+
+# Build folders (if you use tools later)
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# Backup files
+*.bak
+*.backup
+*-copy.*
+* copy.*
+old/
+backup/
+
+# Large media (optional - if you have huge video files)
+# *.mov
+# *.mp4
+# *.psd

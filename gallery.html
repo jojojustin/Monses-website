@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photo gallery for Monse's Taste of El Salvador Pupuseria — see our food, dining room, patio, and vibrant atmosphere in Colorado Springs." />
+  <title>Gallery | Monse's Taste of El Salvador</title>
+  <!-- FAVICON PLACEHOLDER: Replace with your favicon file -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+ 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQBPGT7SYF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PQBPGT7SYF');
+</script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Gallery lightbox */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(15,6,0,0.92); align-items: center; justify-content: center;
+      padding: 2rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 85vh;
+      border-radius: var(--radius-lg);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: rgba(255,255,255,0.12); border: none; border-radius: 50%;
+      width: 44px; height: 44px; color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; transition: background var(--dur) var(--ease);
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+    .gallery-item.has-image { cursor: pointer; }
+    .gallery-item.has-image img {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: var(--radius-lg);
+      transition: transform var(--dur-long) var(--ease);
+      display: block;
+    }
+    .gallery-item.has-image:hover img { transform: scale(1.04); }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <nav class="nav solid" id="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo"><span class="nav-logo-main">Monse's</span><span class="nav-logo-sub">Taste of El Salvador</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li><li><a href="events.html">Private Events</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="https://order.toasttab.com/online/monsess-old-colorado-city-115-south-25th-street" class="nav-cta" target="_blank" rel="noopener noreferrer">Order Online</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-mobile" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+      <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a>
+      <a href="events.html">Private Events</a><a href="gallery.html" class="active">Gallery</a>
+      <a href="https://order.toasttab.com/online/monsess-old-colorado-city-115-south-25th-street" target="_blank" rel="noopener noreferrer" class="mobile-order-btn">Order Online</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="page-hero">
+      <p class="page-hero-eyebrow">Photos</p>
+      <h1>Our Gallery</h1>
+      <p>A glimpse inside Monse's — the food, the space, the experience</p>
+    </div>
+
+    <section class="gallery-page" aria-label="Photo gallery">
+      <div class="container">
+
+        <div class="gallery-intro fade-up">
+          <p class="section-eyebrow" style="justify-content:center;">From Our Kitchen</p>
+          <p class="section-body" style="margin:0 auto;text-align:center;">
+            From hand-pressed pupusas to our vibrant mural and welcoming patio — this is Monse's. Click any photo to view it larger.
+          </p>
+        </div>
+
+        <!-- ── REAL PHOTOS (from TripAdvisor / Squarespace CDN) ── -->
+                <div class="gallery-grid" role="list" aria-label="Restaurant photos">
+
+          <!-- 1. Mural (tall) -->
+          <div class="gallery-item has-image tall fade-up" role="listitem"
+               data-src="https://images.squarespace-cdn.com/content/v1/5a7c91b2b07869bbbd6ef2c6/77cfc150-3142-4bca-bf4b-9cd58e73cbbe/building+mural+logo.jpg"
+               tabindex="0" aria-label="View: Monse's colorful building mural">
+            <img src="https://images.squarespace-cdn.com/content/v1/5a7c91b2b07869bbbd6ef2c6/77cfc150-3142-4bca-bf4b-9cd58e73cbbe/building+mural+logo.jpg"
+              alt="Monse's Taste of El Salvador — colorful building mural" loading="lazy" />
+          </div>
+
+          <!-- 2. Pupusas -->
+          <div class="gallery-item has-image fade-up fade-up-delay-1" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-m/1280/28/f3/82/e2/caption.jpg"
+               tabindex="0" aria-label="View: Pupusas plated with curtido">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/28/f3/82/e2/caption.jpg"
+              alt="Two freshly made pupusas with curtido and salsa" loading="lazy" />
+          </div>
+
+          <!-- 3. Dining room -->
+          <div class="gallery-item has-image fade-up fade-up-delay-2" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-w/23/3f/2e/8e/caption.jpg"
+               tabindex="0" aria-label="View: Dining room interior">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-w/23/3f/2e/8e/caption.jpg"
+              alt="Monse's warm dining room with wood tables and Edison lighting" loading="lazy" />
+          </div>
+
+          <!-- 4. LASTONEBRUH - This fills the gap -->
+          <div class="gallery-item has-image fade-up" role="listitem"
+               data-src="images/lastonebruh.jpeg"
+               tabindex="0" aria-label="View: Restaurant atmosphere">
+            <img src="images/lastonebruh.jpeg" alt="Monse's restaurant atmosphere" loading="lazy" />
+          </div>
+
+          <!-- 5. Drink -->
+          <div class="gallery-item has-image fade-up fade-up-delay-1" role="listitem"
+               data-src="images/modrink.jpeg"
+               tabindex="0" aria-label="View: Layered green drink">
+            <img src="images/modrink.jpeg" alt="Girl holding layered green drink">
+          </div>
+
+          <!-- 6. Two plates -->
+          <div class="gallery-item has-image fade-up fade-up-delay-2" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/03/a4/26/photo0jpg.jpg"
+               tabindex="0" aria-label="View: Two plates of pupusas on the table">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/1d/03/a4/26/photo0jpg.jpg"
+              alt="Two full plates of pupusas on the table at Monse's" loading="lazy" />
+          </div>
+
+          <!-- 7. Pupusa close-up -->
+          <div class="gallery-item has-image fade-up" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-m/1280/25/24/88/bb/caption.jpg"
+               tabindex="0" aria-label="View: Pupusa close-up">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/25/24/88/bb/caption.jpg"
+              alt="Close-up of a golden, freshly made pupusa" loading="lazy" />
+          </div>
+
+          <!-- 8. Tostada -->
+          <div class="gallery-item has-image fade-up fade-up-delay-1" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-m/1280/23/3f/2e/8d/caption.jpg"
+               tabindex="0" aria-label="View: Tostada Salvadoreno">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/23/3f/2e/8d/caption.jpg"
+              alt="Tostada Salvadoreno topped with meat, pico de gallo and sour cream" loading="lazy" />
+          </div>
+
+          <!-- 9. Curtido -->
+          <div class="gallery-item has-image fade-up fade-up-delay-2" role="listitem"
+               data-src="https://media-cdn.tripadvisor.com/media/photo-m/1280/25/24/88/bc/caption.jpg"
+               tabindex="0" aria-label="View: Curtido">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/25/24/88/bc/caption.jpg"
+              alt="Housemade curtido — Monse's fermented cabbage slaw" loading="lazy" />
+          </div>
+
+          <!-- 10. Strawberry mojito -->
+          <div class="gallery-item has-image fade-up" role="listitem"
+               data-src="https://images.squarespace-cdn.com/content/v1/555cd8b8e4b0c647a26e43c9/1578519250688-T46XLW2ICZXWKUOV33ZD/Strawberry+Mojito+2.jpg"
+               tabindex="0" aria-label="View: Strawberry mojito cocktail">
+            <img src="https://images.squarespace-cdn.com/content/v1/555cd8b8e4b0c647a26e43c9/1578519250688-T46XLW2ICZXWKUOV33ZD/Strawberry+Mojito+2.jpg"
+              alt="Strawberry mojito — one of Monse's handcrafted cocktails" loading="lazy" />
+          </div>
+
+          <!-- 11. Traditional plate -->
+          <div class="gallery-item has-image fade-up fade-up-delay-1" role="listitem"
+               data-src="https://images.squarespace-cdn.com/content/v1/555cd8b8e4b0c647a26e43c9/1578519104037-L9YB7J4QZ6UJYVV3SH10/Traditional%2C+Skillet%2C+and+Coffee.jpg"
+               tabindex="0" aria-label="View: Traditional Plate">
+            <img src="https://images.squarespace-cdn.com/content/v1/555cd8b8e4b0c647a26e43c9/1578519104037-L9YB7J4QZ6UJYVV3SH10/Traditional%2C+Skillet%2C+and+Coffee.jpg"
+              alt="The Traditional Plate — eggs, beans, plantains and chorizo" loading="lazy" />
+          </div>
+
+          <!-- 12. newinterior -->
+          <div class="gallery-item has-image fade-up" role="listitem"
+               data-src="images/newinterior.jpg"
+               tabindex="0" aria-label="View: Interior design">
+            <img src="images/newinterior.jpg" alt="Interior Design">
+          </div>
+
+          <!-- 13. otherinterior -->
+          <div class="gallery-item has-image fade-up fade-up-delay-1" role="listitem"
+               data-src="images/otherinterior.jpg"
+               tabindex="0" aria-label="View: Interior/Exterior">
+            <img src="images/otherinterior.jpg" alt="Interior/Exterior">
+          </div>
+
+          <!-- 14. motaco -->
+          <div class="gallery-item has-image fade-up fade-up-delay-2" role="listitem"
+               data-src="images/motaco.jpeg"
+               tabindex="0" aria-label="View: Food">
+            <img src="images/motaco.jpeg" alt="Food">
+          </div>
+
+          <!-- 15. mofood1 -->
+          <div class="gallery-item has-image fade-up" role="listitem"
+               data-src="images/mofood1.jpeg"
+               tabindex="0" aria-label="View: Pupusas on a plate">
+            <img src="images/mofood1.jpeg" alt="Pupusas on a plate">
+          </div>
+
+        </div><!-- /.gallery-grid -->
+
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="order-cta" aria-label="Visit us">
+      <div class="order-cta-inner fade-up">
+        <h2>Come See It<br>In Person</h2>
+        <p>Photos don't do it justice. Come experience Monse's for yourself.</p>
+        <div class="order-cta-btns">
+          <a href="https://maps.google.com/?q=115+S+25th+St,+Colorado+Springs,+CO+80904"
+             class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+          <a href="https://order.toasttab.com/online/monsess-old-colorado-city-115-south-25th-street"
+             class="btn-hero-secondary" target="_blank" rel="noopener noreferrer">Order Online</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div><div class="footer-brand-name">Monse's</div><div class="footer-brand-sub">Taste of El Salvador · Pupuseria</div><p class="footer-brand-desc">A locally owned Salvadoran eatery serving homestyle, gluten-free pupusas and traditional favorites in Old Colorado City.</p></div>
+      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li><li><a href="events.html">Private Events</a></li><li><a href="gallery.html">Gallery</a></li></ul></div>
+      <div class="footer-col"><h4>Order</h4><ul><li><a href="https://order.toasttab.com/online/monsess-old-colorado-city-115-south-25th-street" target="_blank" rel="noopener noreferrer">Order Online (Toast)</a></li><li><a href="tel:+17194730877">Call to Order</a></li><li><a href="mailto:monsespupuseria@yahoo.com">Email Us</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><address><a href="https://maps.google.com/?q=115+S+25th+St,+Colorado+Springs,+CO+80904" target="_blank" rel="noopener noreferrer">115 S. 25th Street<br>Colorado Springs, CO 80904</a><br><br><a href="tel:+17194730877">(719) 473-0877</a><br><a href="mailto:monsespupuseria@yahoo.com">monsespupuseria@yahoo.com</a></address></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Monse's Taste of El Salvador. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a href="events.html">Private Events</a><a href="https://order.toasttab.com/online/monsess-old-colorado-city-115-south-25th-street" target="_blank" rel="noopener noreferrer">Order Online</a></div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></a>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Lightbox for gallery
+    const lightbox     = document.getElementById('lightbox');
+    const lightboxImg  = document.getElementById('lightboxImg');
+    const lightboxClose= document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item.has-image').forEach(function (item) {
+      item.addEventListener('click', function () {
+        lightboxImg.src = item.dataset.src;
+        lightboxImg.alt = item.querySelector('img').alt;
+        lightbox.classList.add('open');
+        lightboxClose.focus();
+        document.body.style.overflow = 'hidden';
+      });
+      item.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
